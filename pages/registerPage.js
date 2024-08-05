@@ -15,7 +15,7 @@ exports.registerUser=class registerUser{
         this.password="//input[@id='Password']"
         this.confirmPassword="//input[@id='ConfirmPassword']"
         this.registerBtn="//button[@id='register-button']"
-        this.email_adr='salk@google.com'
+        this.email_adr='salki@google.com'
         this.password_adr='Sahil@122'
 
         this.success='//div[@class="result"]'
