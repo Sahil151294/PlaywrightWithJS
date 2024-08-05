@@ -1,2 +1,0 @@
-# PlaywrightWithJS
-Playwright with Javascript
