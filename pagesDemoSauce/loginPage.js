@@ -16,6 +16,7 @@ exports.loginUser
 
     async goTo(){
         await this.page.goto(this.loginURL)
+        await this.page.waitForTimeout(500)
     }
 
     
