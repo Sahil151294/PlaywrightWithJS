@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test')
 const { loginUser } = require('../pagesDemoSauce/loginPage')
+const { cartPage } = require('../pagesDemoSauce/cartPage')
 
 
 
@@ -60,5 +61,17 @@ test.skip('Login User without Username Password', async ({ page }) => {
    await LoginUsr.goTo()
    await LoginUsr.login_no_user_password()
    expect(page.locator("h3[data-test='error']")).toContainText('Username is required')
+
+})
+
+
+test.skip('Login User with Standard User', async ({ page }) => {
+
+    //this case checks for normal positive login scenarios
+    const LoginUsr=new loginUser(page)
+
+    await LoginUsr.goTo()
+    await LoginUsr.login('standard_user', 'secret_sauce')
+    await expect(page.locator("//div[@class='app_logo']")).toContainText("Swag Labs")
 
 })
